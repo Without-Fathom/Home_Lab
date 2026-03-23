@@ -10,6 +10,7 @@ The focus is on:
 - Re-purposing & recycling hardware securely
 - Making failure modes visible and boring
 
+
 > **Important**
 > - No live IPs, hostnames, serials, MACs, or credentials exist in this repo
 > - All network values use a **placeholder subnet: `10.10.10.0/24`**
@@ -43,30 +44,28 @@ Details live under `docs/`.
 
 ## Repository layout
 
-docs/
-00-scope-and-redaction.md
-01-overview.md
-02-topology.md
-03-routing-firewall.md
-05-selfhosting-services.md
-06-home-assistant-ui.md
-90-lessons-learned.md
-99-roadmap.md
-diagrams/
-topology.mmd
-exports/
-config-samples/
-docker-compose/
-network/
+All documentation lives under `docs/`.
+
+The repository intentionally avoids configuration files, scripts, or
+deployable artefacts. The focus is on design intent and operational lessons,
+not reproducible builds.
+
 
 ---
 
-## Diagram (intentional abstraction)
+## High‑level topology (abstracted)
 
-The diagram below shows **routing and service placement only**.
-Endpoints, client counts, and device identities are intentionally omitted.
+This diagram shows routing and service placement only.
+Endpoints, client devices, and physical layout are intentionally omitted.
 
-See: `diagrams/topology.mmd`
+```mermaid
+flowchart LR
+    Router["Router / Firewall"]
+    Subnet["Infrastructure subnet\n10.10.10.0/24"]
+    Pi["Service Host\npi-host.lab.local\n10.10.10.10"]
+
+    Router --> Subnet --> Pi
+
 
 ---
 
