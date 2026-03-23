@@ -38,13 +38,13 @@ The focus is on:
 - Default‑deny between segments; explicit allow rules
 - Observability > cleverness
 
-Details live under `docs/`.
+Details live under [`docs/`](docs/).
 
 ---
 
 ## Repository layout
 
-All documentation lives under `docs/`.
+Detailed documentation lives under [`docs/`](docs/).
 
 The repository intentionally avoids configuration files, scripts, or
 deployable artefacts. The focus is on design intent and operational lessons,
