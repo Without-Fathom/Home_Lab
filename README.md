@@ -65,7 +65,7 @@ flowchart LR
     Pi["Service Host: pi-host.lab.local (10.10.10.10)"]
 
     Router --> Subnet --> Pi
-
+```
 
 ---
 
