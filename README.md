@@ -61,8 +61,8 @@ Endpoints, client devices, and physical layout are intentionally omitted.
 ```mermaid
 flowchart LR
     Router["Router / Firewall"]
-    Subnet["Infrastructure subnet\n10.10.10.0/24"]
-    Pi["Service Host\npi-host.lab.local\n10.10.10.10"]
+    Subnet["Infrastructure subnet (10.10.10.0/24)"]
+    Pi["Service Host: pi-host.lab.local (10.10.10.10)"]
 
     Router --> Subnet --> Pi
 
